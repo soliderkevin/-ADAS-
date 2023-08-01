@@ -1,0 +1,34 @@
+Project:
+ADAS_Driving_Car
+Requirements:
+R1.(Pure_Pursuit)
+1- 3 rounds chase.
+2- up to 120 km
+3- Monza map tracking
+
+R2.(Pure_Pursuit)
+1- Switching lane in 3 seconds when ego_car speed< self_car speed.
+2- Generating better tracks for the ego_car in tracking. (Frenet tracking)
+3- ego_car < self_car speed is essential.
+
+R3.(State Feedback tracking)- Not available yet.
+State Feedback tracking
+
+
+Problems:(Practical code from Professor)
+R1-P:
+1-  Only can up to 70 km(Out of bound chase)
+2-  Only 1 round chase.
+3-  No switching lane 
+
+Solutions:
+1- 
+Step1:
+Step 1-1:In cycle we have (Reading in x1,y1 location and x2, y2 location into formula.)
+ 
+Step 1-2: Finding Curvatives in Monza map by scanning through all the points and calculating the formula,
+reading from the map(Road_Center Column 1,2) and save it into Road_Center Column 3 variables.
+
+Step2: Reading from the Road_Center and adjust into speed(finding max_speed) - Can be written inside Radar Generator
+
+Step3: Adjust car_speed inside the "RadarGenerator.

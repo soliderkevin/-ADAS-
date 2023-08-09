@@ -3,7 +3,7 @@ clc
 close all
 
 %global vari
-Car_Velocity = 100; %For ego_car function.
+Car_Velocity = 30; %For ego_car function.
 
 
 X_map = getloopmap();
@@ -36,7 +36,7 @@ ego_car.Yaw = X_map(1,3)*180/pi; %Yaw就是heading angle，在Matlab吃角度不
 %simulating Car對手車狀態
 car_1 = vehicle(scenario,'ClassID',1,'Position',[ego_car.Position(1)+10 -1.8 0]); 
 car_1_Waypoints = roadCenters(20:end,:);
-carSpeed = 90; % m/s
+carSpeed = 20; % m/s
 smoothTrajectory(car_1,car_1_Waypoints,carSpeed)
  
  %%

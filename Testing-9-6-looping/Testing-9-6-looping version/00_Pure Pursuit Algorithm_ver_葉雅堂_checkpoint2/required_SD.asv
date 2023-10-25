@@ -1,0 +1,23 @@
+function [required_SD] =  X_map(X)
+
+
+whil i : X_map(X)
+    data = X_map(:,1:4) %curvature_input
+    data_average = X_map(:,i:i+3);
+
+    curve=std(data_average);
+
+    if( curve >= 50)
+
+        required_SD = std(data);
+
+        disp(std_dev);
+    else
+
+        required_SD = mean(data);
+
+    end
+end
+
+
+end
